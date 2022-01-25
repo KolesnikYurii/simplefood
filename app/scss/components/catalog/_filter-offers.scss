@@ -1,0 +1,44 @@
+.filter-offers {
+	&__label {
+		padding-left: 36px;
+		margin-bottom: 13px;
+		display: block;
+	}
+
+	&__input {
+		@extend %checkbox-hidden;
+
+		&:checked + .filter-offers__checkbox {
+			background-image: url("../images/icons/checked.svg");
+			border: 1px solid #000;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			& + .filter-offers__text {
+				color: $orange-900;
+			}
+		}
+	}
+
+	&__checkbox {
+		background-color: #faeded;
+		height: 20px;
+		width: 20px;
+		border: 1px solid $silver-200;
+		border-radius: 5px;
+		position: absolute;
+		margin-left: -36px;
+		transition: all 0.2s;
+
+		&:hover {
+			border: 1px solid $orange-900;
+			border-radius: 3px;
+		}
+
+		&:focus {
+			border: 1px solid $orange-900;
+			color: $dark;
+			border-radius: 3px;
+		}
+	}
+}

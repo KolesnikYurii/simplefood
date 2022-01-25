@@ -1,0 +1,114 @@
+.footer {
+	margin-bottom: 60px;
+
+	&__inner {
+		display: flex;
+		margin-right: 65px;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+			margin-right: 0;
+		}
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin-right: 60px;
+		max-width: 205px;
+
+		@media (max-width: 992px) {
+			margin-left: auto;
+			margin-right: 130px;
+			order: 1;
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: 576px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 27px;
+		display: inline-block;
+
+		@media (max-width: 576px) {
+			width: 200px;
+		}
+	}
+	&__form {
+		max-width: 200px;
+		font-size: 14px;
+	}
+	&__label {
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__input {
+		background-color: $white;
+		color: $gray;
+		padding: 13px 14px;
+		border: 1px solid $gray;
+		border-radius: 5px;
+		outline: transparent;
+
+		&:focus {
+			border-color: $orange-900;
+		}
+
+		&:hover {
+			&::placeholder {
+				color: $darkBlue-900;
+			}
+		}
+	}
+
+	&__svg {
+		fill: $white;
+	}
+
+	&__btn {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 12px 39px;
+
+		&:focus {
+			.footer__svg {
+				fill: $orange-900;
+			}
+		}
+
+		&:hover {
+			.footer__svg {
+				fill: $orange-900;
+			}
+		}
+
+		&:active {
+			border: 2px solid transparent;
+			.footer__svg {
+				fill: $orange-900;
+			}
+		}
+	}
+
+	&__copy {
+		font-size: 14px;
+		text-align: center;
+		padding: 33px 0;
+		border-top: 1px solid $silver-200;
+	}
+}

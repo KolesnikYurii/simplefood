@@ -1,0 +1,39 @@
+.filter-category {
+	&__form {
+		padding-bottom: 13px;
+	}
+
+	&__label {
+	}
+
+	&__input {
+		@extend %checkbox-hidden;
+	}
+
+	&__checkbox {
+		margin-bottom: 12px;
+		border: 2px solid transparent;
+		cursor: pointer;
+
+		&:hover {
+			border: 2px solid transparent;
+			color: $orange-900;
+		}
+
+		&:focus {
+			border: 2px solid $orange-900;
+			color: $dark;
+			border-radius: 7px;
+		}
+
+		&:active {
+			border: 2px solid transparent;
+			color: $dark;
+			text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+		}
+
+		&--active {
+			color: $orange-900;
+		}
+	}
+}

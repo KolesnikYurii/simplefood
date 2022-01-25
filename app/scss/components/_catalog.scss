@@ -1,0 +1,124 @@
+.catalog {
+	
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		
+		@media (max-width: 992px) {
+			display: block;
+		}
+	}
+	
+	&__title {
+		@media (max-width: 768px) {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.2;
+		padding: 15px;
+		border-bottom: 1px solid $silver-200;
+
+		@media (max-width: 1200px) {
+			padding: 15px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 60px;
+
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		margin-bottom: 55px;
+		justify-items: center;
+
+		@media (max-width: 1200px) {
+			grid-gap: 5px;
+		}
+
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: 576px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 210px;
+		font-size: 15px;
+		width: 100%;
+		padding: 18px 15px 20px;
+		background-color: $white;
+		border: 2px solid $silver-200;
+		border-radius: 6px;
+		transition: all 0.3s;
+
+		&:hover {
+			border: 2px solid $orange-900;
+		}
+	}
+
+	&__filters {
+		top: 0;
+		width: 270px;
+		border: 1px solid $silver-200;
+		border-radius: 5px;
+		background-color: $white;
+		height: 100%;
+		margin-right: 30px;
+		position: relative;
+
+		@media (max-width: 1200px) {
+			margin-right: 10px;
+			max-width: 225px;
+		}
+
+		@media (max-width: 992px) {
+			min-width: 270px;
+			transform: translateX(-120%);
+			transition: transform 0.4s;
+			position: absolute;
+			padding: 20px;
+			height: 100vh;
+
+			&--active {
+				overflow: auto;
+				position: absolute;
+				min-width: 90%;
+				padding-right: 100px;
+				top: 0;
+				left: 0;
+				transition: transform 0.5s;
+				z-index: 666;
+				transform: translateX(0);
+
+				@media (max-width: 576px){
+					padding-right: 70px;
+				}
+			}
+		}
+	}
+}

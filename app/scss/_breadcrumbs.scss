@@ -1,0 +1,41 @@
+.breadcrumbs {
+	background-color: rgba(255, 122, 80, 0.1);
+	padding: 24px 0;
+	margin-bottom: 40px;
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		color: #505050;
+		padding-right: 16px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../images/icons/angle-right.svg");
+			width: 6px;
+			height: 10px;
+			right: 5px;
+			top: 6px;
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+	}
+
+	&__span{
+		font-weight: 600;
+	}
+}

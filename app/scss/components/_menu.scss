@@ -1,0 +1,176 @@
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 58px 5px 0 5px;
+	margin-bottom: 58px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 43px 0 auto;
+
+		@media (max-width: 768px){
+			display: none;
+		}
+
+		&--footer {
+			column-count: 3;
+			display: block;
+			order: 3;
+
+			@media (max-width: 1200px) {
+				margin-right: 10px;
+			}
+
+			@media (max-width: 992px) {
+				column-count: 4;
+				margin-right: 0;
+			}
+
+			@media (max-width: 576px) {
+				column-count: 1;
+				margin-left: 0;
+			}
+		}
+
+		&--navbar {
+			flex-direction: column;
+			padding: 25px 0;
+			margin: 0 0 15px;
+			border-top: 1px solid #eeeff3;
+			border-bottom: 1px solid #eeeff3;
+		}
+	}
+
+	&__item {
+		@media (max-width: 768px) {
+			text-align: left;
+		}
+		&:not(:last-child) {
+			margin-right: 32px;
+
+			@media (max-width: 768px) {
+				margin-right: 0;
+			}
+		}
+
+		&--footer {
+			margin-bottom: 12px;
+
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+
+			@media (max-width: 992px) {
+				padding: 0;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__link {
+		padding: 2px 5px;
+		color: $dark;
+		display: inline-block;
+		transition: all 0.3s;
+
+		&--active {
+			color: $orange-900;
+		}
+
+		&--footer {
+			@media (max-width: 768px) {
+				padding: 0;
+			}
+
+			@media (max-width: 576px) {
+				display: block;
+			}
+		}
+
+		@media (max-width: 768px) {
+			display: block;
+			border-bottom: 2px solid transparent;
+			padding: 10px 15px;
+		}
+
+		&--navbar {
+			padding-left: 0;
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		@media (max-width: 768px) {
+			display: block;
+			height: 20px;
+			width: 30px;
+			right: 22px;
+			position: absolute;
+			background-color: transparent;
+			z-index: 10;
+		}
+	}
+
+
+
+	&__line {
+		@media (max-width: 768px) {
+			display: block;
+			margin: 0 auto;
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			background-color: $darkBlue-900;
+			transition: 0.3s;
+
+			&::after {
+				width: 100%;
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 5px;
+				height: 2px;
+				background-color: $darkBlue-900;
+				transition: 0.3s;
+				transform: translateY(13px);
+			}
+
+			&::before {
+				width: 100%;
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 5px;
+				height: 2px;
+				background-color: $darkBlue-900;
+				transition: 0.3s;
+				transform: translateY(-13px);
+			}
+		}
+	}
+
+	&.menu--footer {
+		margin-bottom: 0;
+		padding: 0;
+		align-items: start;
+
+		@media (max-width: 992px) {
+			padding: 0;
+			order: 3;
+			margin: 0 auto;
+		}
+
+		@media (max-width: 576px) {
+			margin: 0;
+			display: block;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 27px 0 0;
+		margin-bottom: 30px;
+	}
+}

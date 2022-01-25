@@ -1,0 +1,115 @@
+.filter-price {
+	min-height: 191px;
+
+	&__form {
+		height: 83px;
+		border-bottom: 1px solid transparent;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__span {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 110px;
+		font-size: 16px;
+		color: $gray;
+	}
+
+	&__from,
+	&__to {
+		max-width: 70px;
+		max-height: 40px;
+		color: $darkBlue-900;
+		font-family: "Rubik";
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1;
+		text-shadow: none;
+		padding: 12px 15px;
+		background-color: #faeded;
+		border-radius: 3px;
+		border: 1px solid transparent;
+		text-align: center;
+
+		&:focus {
+			border: 1px solid $orange-900;
+		}
+	}
+}
+
+.irs--round {
+	height: 0;
+}
+
+.irs--round .irs-line {
+	top: 70px;
+	height: 2px;
+	background-color: $silver-200;
+	border-radius: 0;
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+	display: none;
+}
+
+.irs--round .irs-bar {
+	top: 70px;
+	height: 2px;
+	background-color: $orange-900;
+}
+
+.irs--round .irs-handle {
+	top: 61px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: $orange-900;
+	border: none;
+	cursor: pointer;
+}
+
+.irs--round .irs-handle.state_hover,
+.irs--round .irs-handle:hover {
+	background-color: $orange-900;
+}
+
+.irs--round .irs-handle > i:first-child {
+	display: none;
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+	color: $darkBlue-900;
+	font-family: "Rubik";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+	text-shadow: none;
+	padding: 12px 15px;
+	background-color: #faeded;
+	border-radius: 3px;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+	display: none;
+}
+
+.irs-from,
+.irs-to {
+	display: none;
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+	display: none;
+}

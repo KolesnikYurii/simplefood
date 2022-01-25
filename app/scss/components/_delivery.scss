@@ -1,0 +1,126 @@
+.delivery {
+	&__inner {
+		margin: auto 70px;
+		background-image: url("../images/delivery-bg.png");
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: contain;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 1200px) {
+			margin: auto 30px;
+			background-size: contain;
+		}
+
+		@media (max-width: 992px) {
+			background-position: center;
+			margin: auto 0;
+		}
+
+		@media (max-width: 576px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__contetn {
+		max-width: 470px;
+		padding: 25px 0;
+		margin-left: auto;
+
+		@media (max-width: 992px) {
+			background-color: rgba(249, 250, 255, 0.85);
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		max-width: 360px;
+	}
+
+	&__desc {
+		margin-bottom: 30px;
+		font-size: 20px;
+		line-height: 1.5;
+
+		@media (max-width: 576px) {
+			font-size: 16px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 30px;
+
+		@media (max-width: 576px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+		line-height: 1;
+
+		@media (max-width: 576px) {
+			font-size: 18px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+
+			@media (max-width: 576px) {
+				margin-bottom: 18px;
+			}
+		}
+	}
+
+	&__svg {
+		margin-right: 20px;
+		flex-shrink: 0;
+
+		@media (max-width: 576px) {
+			width: 34px;
+			height: 34px;
+			margin-right: 10px;
+		}
+	}
+
+	&__text {
+		max-width: 350px;
+	}
+
+	&__link {
+		display: inline-block;
+		border: 2px solid transparent;
+		color: $white;
+		background-color: $orange-900;
+		border-radius: 6px;
+		padding: 12px 32px;
+		transition: all 0.3s;
+
+		@media (max-width: 576px) {
+			font-size: 14px;
+			line-height: 1;
+		}
+
+		&:focus {
+			color: $orange-900;
+			border: 2px solid $orange-900;
+			background-color: rgba(255, 122, 80, 0.1);
+		}
+
+		&:hover {
+			color: $orange-900;
+			border: 2px solid $orange-900;
+			background-color: $white;
+		}
+
+		&:active {
+			color: $orange-900;
+			border: 2px solid transparent;
+			background-color: rgba(255, 122, 80, 0.1);
+		}
+	}
+}
